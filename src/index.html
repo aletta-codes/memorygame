@@ -3,10 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>webpack starterkit</title>
+    <title>Aletta's Memory Game</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-  <h1>webpack starter</h1>
-  <p>✨ A lightweight foundation for your next webpack based frontend project.</p>
+
+<section id="memory-game">
+    <script id="all-cards" type="text/x-handlebars-template">
+      {{#each cards}}
+      <div class="memory-card" id="card-{{this}}" data-card="{{this}}">
+        <ul>
+            <li class="front-face flip">
+                card {{this}}
+            </li>
+            <li class="back-face">
+                card back
+            </li>
+        </ul>
+      </div>
+      {{/each}}
+    </script>
+</section>
+<script src="index.js"></script>
 </body>
 </html>
